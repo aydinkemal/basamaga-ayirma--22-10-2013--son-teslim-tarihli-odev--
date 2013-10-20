@@ -1,0 +1,34 @@
+// Basamaklara ayırma programı // Kemal AYDIN // 12253008
+#include<stdio.h>
+#include<conio.h>  // işi garantiye almak için bildiğimiz tüm kütüphaneleri çağırırız :)
+#include<stdlib.h>
+#include<Windows.h>
+
+
+int main()
+{
+	int v,a,b,c,d; // kullanacagımız değişkenleri burdan tanımladık
+	
+	printf("4 basamakli bir sayi giriniz:"); // kullanıcıya sayı girmesi gerektiğini gösterir	
+	flushall(); 
+	scanf_s("%d",&v); // kullanıcının girdiği sayıyı v değişkenine depolar
+	a = v%10; // birler basamagı hesaplayan formul
+	
+	printf("\n\n%d adet birlik sayi vardir.\n",a); //  a yı göstermek için kullanılır
+
+	b =(v/10)%10; // onlar basamagını hesaplayan formul
+	
+	printf("%d adet onluk sayi vardir.\n",b);   // b yi göstermek için kullanılır
+	
+	c =(v/100)%10;  // yüzler basamagı hesaplayan formul
+
+	printf("%d adet yuzluk sayi vardir.\n",c);   //c  yi göstermek için kullanılır
+	
+	d = (v/1000)%10;  // binler basamagını hesaplayan formul
+	
+	printf("%d adet binlik sayi vardir.\n",d); // d yi göstermek için kullanılır	
+	 getch(); // program kapanmadan önce bizden bir girdi almayı bekliyor böylece konsol kapanmıyor
+	return 0;
+	 
+
+}
